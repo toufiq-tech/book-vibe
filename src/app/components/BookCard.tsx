@@ -1,6 +1,7 @@
 import React from 'react';
 import { IBook } from '../types/books.type';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface IBookCardProps {
     book: IBook;
@@ -13,9 +14,11 @@ const BookCard = ({ book } : IBookCardProps) => {
           >
             {/* Image */}
             <div className="relative h-80 overflow-hidden bg-gray-100">
-              <img
+              <Image
                 src={book.image}
                 alt={book.bookName}
+                height={400}
+                width={400}
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
               />
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { IBook } from '../../types/books.type';
 import ReadButton from '@/app/components/ReadButton';
 import WishlistButton from '@/app/components/WishlistButton';
+import Image from 'next/image';
 
 interface IBookDetailsProps {
     params: {
@@ -24,9 +25,12 @@ const BookDetails = async ({params} : IBookDetailsProps) => {
         <div className="container mx-auto">
             <div className="card lg:card-side bg-base-100 shadow-sm">
   <figure>
-    <img
-      src="book.image"
-      alt="book.bookName" />
+    <Image
+      src={book.image}
+      alt={book.bookName} 
+      height={400}
+      width={800}
+    />
   </figure>
   <div className="card-body">
     <h2 className="card-title">{book.bookName}</h2>

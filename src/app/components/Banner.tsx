@@ -26,6 +26,8 @@ const BannerSection = () => {
             src={bannerImage}
             alt="Banner Image"
             className="rounded-xl shadow-lg object-cover"
+            height={400}
+            width={400}
             priority
           />
         </div>
