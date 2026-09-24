@@ -1,6 +1,7 @@
 import React from 'react';
 import { IBook } from '../../types/books.type';
 import ReadButton from '@/app/components/ReadButton';
+import WishlistButton from '@/app/components/WishlistButton';
 
 interface IBookDetailsProps {
     params: {
@@ -32,7 +33,7 @@ const BookDetails = async ({params} : IBookDetailsProps) => {
     <p>{book.review}</p>
     <div className="card-actions justify-end">
       <ReadButton book = {book}/>
-      <button className="btn btn-primary">Wishlist</button>
+      <WishlistButton book = {book}/>
     </div>
   </div>
 </div>
